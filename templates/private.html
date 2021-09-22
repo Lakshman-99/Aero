@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+      <link rel="icon" href= "{{url_for('static' , filename='aero icon.ico')}}" type="image/gif">
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="apple-touch-icon" href="apple-touch-icon.png">
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+              <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+                <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-theme.min.css') }}">
+                  <link rel="stylesheet" href="{{ url_for('static', filename='fontAwesome.css') }}">
+                    <link rel="stylesheet" href="{{ url_for('static', filename='hero-slider.css') }}">
+                      <link rel="stylesheet" href="{{ url_for('static', filename='owl-carousel.css') }}">
+                        <link rel="stylesheet" href="{{ url_for('static', filename='datepicker.css') }}">
+                          <link rel="stylesheet" href="{{ url_for('static', filename='tooplate.css') }}">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+<body>
+<a href="{{('/')}}"<h1 class="gh">AERO</h1></a> <br>
+  
+  <p style="position:relative;
+  top:400px;
+  right:418px;
+  font-weight:bold;
+  font-family: 'Roboto', sans-serif;">Our planes are child safe as it is sanitised well before every use</p>
+  <img src="{{url_for('static' ,filename="aircraft.png")}}" style="height:200px; width:200px; position:relative;
+  top:160px;
+  right:800px; "alt="">
+  <style>
+  .btn {
+    position: relative;
+    height: 50px;
+    top:30px;
+    left:165px;
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 15px;
+    background: #000000;
+    padding: 7px 20px 10px 20px;
+    text-decoration: none;
+    border: solid 2px black;
+  }
+
+  .btn:hover {
+    color:black;
+    background-color: white;
+    text-decoration: none;
+  }
+  </style>
+
+<div class="col-md-5 col-md-offset-1" style="position:relative;
+  top:150px;
+  left:600px;
+  text-align:center;">
+    <section id="first-tab-group" class="tabgroup">
+        <div id="tab1">
+            <div class="submit-form">
+                <h4>Check availability for <em>planes</em>:</h4>
+                <form id="form-submit" action="{{url_for('priprocess')}}" method="POST">
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <fieldset>
+                                <label for="departure">Wanted date:</label>
+                                <input name="deparure" type="text" class="form-control date" id="deparure" placeholder="Select pilots." required="" onchange='this.form.()'>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset>
+                                <label for="return">Return date:</label>
+                                <input name="return" type="text" class="form-control date" id="return" placeholder="Select date..." required="" onchange='this.form.()'>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset>
+                                <button type="submit" id="form-submit" class="btn">Order planes Now</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</div>
+<div style="  height:100px;
+font-family: 'Open Sans', sans-serif;
+  margin:0;
+  padding:0;
+  background-color:black;
+  position: relative;
+  width: 100%;
+  top: 360px;
+">
+  <a class="footer-link" style="position:relative;
+  right:180px;" href="https://www.instagram.com/krishnathangaraj/">Instagram</a>
+  <a class="footer-link" style="position:relative;
+  right:390px;"href="https://www.facebook.com/ricardo.krishna.3">Facebook</a>
+  <a class="footer-link" style="position:relative;
+  right:580px;" href="https://twitter.com/RicardoKeenu">Twitter</a>
+  <p class="pom">© 2021 Aero & company.</p>
+</div>
+</body>

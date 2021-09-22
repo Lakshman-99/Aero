@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>AERO</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <link rel="icon" href="{{url_for('static' , filename='aero icon.ico')}}" type="image/gif">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <a href="{{('/')}}"><button type="submit" class="lo" name="Log in">LOG OUT</button></a>
+  <h1 class="gh">AERO</h1> <br>
+  <p>WELCOME {{value}}</p>
+
+  <style>
+  .lo {
+    position: relative;
+    height: 50px;
+    bottom:-26px;
+    left:686px;
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    font-family: Georgia;
+    color: #ffffff;
+    font-size: 15px;
+    background: #000000;
+    padding: 7px 20px 10px 20px;
+    text-decoration: none;
+    border: solid 2px black;
+  }
+
+  .lo:hover {
+    color:black;
+    background-color: white;
+    text-decoration: none;
+  }
+  </style>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="{{url_for('static', filename='slide1.jfif')}}"  width=100% />
+  <div class="text">we have well-experienced pilots</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="{{url_for('static', filename='slide2.jfif')}}" width="100%" />
+  <div class="text">luxurious travel experience</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="{{url_for('static', filename='slide3.jfif')}}" width="100%"/>
+  <div class="text">private planes available</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 4000); // Change image every 2 seconds
+}
+</script>
+  <div class="top-container">
+    <div class="centered">
+    </div>
+
+    <p class="pud">a destination to <span>experience</span> royalty</p>
+  </div>
+  <div class="middle-container">
+    <div class="profile">
+        <h2>Fly with us in three steps</h2>
+        <a href="{{url_for('booking')}}"><img src="{{url_for('static', filename='plane.png')}}" width="150" height="150" alt="keenu profile picture"></a>
+      <p>Looking forward to fly abroad,want to experience luxurious travel then you have our word.Finish your booking in three steps</p>
+    </div>
+    <div class="skills">
+      <h2>Hire a plane.</h2>
+      <div class="skill-row">
+        <a href="{{url_for('private_booking')}}"><img src="{{url_for('static', filename='Book.jfif')}}" align="middle" width="200" height="200" alt="coding gif"></a>
+        <p>Now you can book private planes along with our experienced pilots for your aircraft.</p>
+      </div>
+      <div class="skill-row">
+        <h2>Access with ease</h2>
+        <a href="{{url_for('tracking')}}" > <img src="{{url_for('static', filename='track.jfif')}}" width="200" height="200" align="middle"> </a>
+        <p>Tracking flights,getting your ticket info and hiring a flight all this with a click.</p>
+      </div>
+    </div>
+  </div>
+    <div class="contact-me">
+      <h2>Facing difficulties?</h2>
+      <img src="{{url_for('static', filename='contact.jfif')}}" align="middle" width="200" height="200" alt="mobile gif">
+      <h3>Feel free to contact us through an email if there's any technical issues that you are facing and we'll be happy to help you.</h3>
+      <p></p>
+      <a class="btn" href="mailto:Aeroexperience2021@gmail.com">MAIL US</a>
+    </div>
+    <br>
+  <div class="bottom-container">
+    <a class="footer-link" href="https://www.instagram.com/krishnathangaraj/">Instagram</a>
+    <a class="footer-link" href="https://www.facebook.com/ricardo.krishna.3">Facebook</a>
+    <a class="footer-link" href="https://twitter.com/RicardoKeenu">Twitter</a>
+    <p class="pom">© 2021 Aero & company.</p>
+  </div>
+</html>

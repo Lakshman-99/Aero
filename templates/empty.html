@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<a href="{{('/')}}"<h1 class="gh">AERO</h1></a> <br>
+    <thead>
+      <tr>plane_id</tr>
+      <tr>plane_name</tr>
+      <tr>plane_current_location</tr>
+      <tr>plane_destination</tr>
+      <tr>plane_start_date</tr>
+      <tr>plane_end_date</tr>
+      <a href="{{url_for('payment')}}"><tr>available_seat</tr></a>
+    </thead>
+    <tbody>
+      {% for row in value %}
+        <tr>
+          <td>{{row[0]}}</td>
+          <td>{{row[1]}}</td>
+          <td>{{row[2]}}</td>
+          <td>{{row[3]}}</td>
+          <td>{{row[4]}}</td>
+          <td>{{row[5]}}</td>
+          <td>{{row[6]}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</html>

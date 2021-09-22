@@ -1,0 +1,132 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+      <link rel="icon" href= "{{url_for('static' , filename='aero icon.ico')}}" type="image/gif">
+            <meta name="description" content="">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="apple-touch-icon" href="apple-touch-icon.png">
+            <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+              <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+                <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap-theme.min.css') }}">
+                  <link rel="stylesheet" href="{{ url_for('static', filename='fontAwesome.css') }}">
+                    <link rel="stylesheet" href="{{ url_for('static', filename='hero-slider.css') }}">
+                      <link rel="stylesheet" href="{{ url_for('static', filename='owl-carousel.css') }}">
+                        <link rel="stylesheet" href="{{ url_for('static', filename='datepicker.css') }}">
+                          <link rel="stylesheet" href="{{ url_for('static', filename='tooplate.css') }}">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+<body>
+  <a href="{{('/')}}"<h1 class="gh">AERO</h1></a> <br>
+  
+    <h1>{{value}}</h1>
+  <div class="col-md-5 col-md-offset-1" style="position:relative;
+    top:150px;
+    left:600px;
+    text-align:center;">
+    <p style="position:relative;
+    top:240px;
+    right:800px;
+    font-weight:bold;
+    font-family: 'Roboto', sans-serif;">please login to book Ticket</p>
+    <img src="{{url_for('static' ,filename='document.png')}}" style="height:200px; width:200px; position:relative;
+    right:800px; "alt="">
+<style>
+.k{
+position: relative;
+right: 595px;
+top: 0;
+width:35px;
+height:35px;
+}
+form{
+
+ text-align: center;
+position:relative;
+   bottom:150px;
+   right:220px;
+}
+.btn {
+  position: relative;
+  height: 50px;
+  top:30px;
+  left:165px;
+  -webkit-border-radius: 60;
+  -moz-border-radius: 60;
+  border-radius: 60px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 15px;
+  background: #000000;
+  padding: 7px 20px 10px 20px;
+  text-decoration: none;
+  border: solid 2px black;
+}
+
+.btn:hover {
+  color:black;
+  background-color: white;
+  text-decoration: none;
+}
+
+</style>
+    <form id="form-submit" action="{{url_for('signuppro')}}" method="POST" >
+        <div class="row">
+
+            <div class="col-md-6">
+                <fieldset>
+                    <label for="departure">USER NAME</label>
+                    <input name="user_name" type="text" class="form-control date" id="deparure" placeholder="enter your name" required="" onchange='this.form.()'>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <label for="return">ADDRESS</label>
+                    <input name="address" type="text" class="form-control date" id="return" placeholder="enter address" required="" onchange='this.form.()'>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <label for="return">MAIL ID</label>
+                    <input name="mail" type="text" class="form-control date" id="return" placeholder="enter email-address" required="" onchange='this.form.()'>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <label for="return">PHONE NUMBER</label>
+                    <input name="phoneno" type="text" class="form-control date" id="return" placeholder="enter phone number" required="" onchange='this.form.()'>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <label for="return">PASSWORD</label>
+                    <input name="pass" type="password" class="form-control date" id="return" placeholder="password" required="" onchange='this.form.()'>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <label for="return"> CONFIRM PASSWORD</label>
+                    <input name="cpass" type="password" class="form-control date" id="return" placeholder="confirm password" required="" onchange='this.form.()'>
+                </fieldset>
+            </div>
+            <div class="col-md-6">
+                <fieldset>
+                    <button type="submit" id="form-submit" class="btn">CREATE</button>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+
+
+  </body>
+</html>

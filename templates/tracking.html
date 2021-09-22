@@ -1,0 +1,69 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="{{url_for('static' , filename='styles.css')}}">
+    <link rel="icon" href="{{url_for('static' , filename='aero icon.ico')}}" type="image/gif">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+  <body>
+    <a href="{{('/')}}"<h1 class="gh">AERO</h1></a> <br>
+    <img src= "{{url_for('static', filename="plane.png")}}" class="k" alt="keenu profile picture">
+    <h2 class="rtx">Enter your ticket no or flight no </h2>
+    <form method="post" action="{{url_for('result')}}">
+    <div class="wrap">
+     <div class="search">
+        <input type="text" class="searchTerm" placeholder="what you are looking for?" name="plane_search" id="planesearch">
+        <button type="submit" style="background-color:white;
+        border: 1px solid black;" class="searchButton">
+          <i class="fa fa-search"></i>
+       </button>
+     </div>
+  </div>
+</form>
+            <img src="{{url_for('static' , filename='glass.png')}}" class="glass" >
+    <div class="slideshow-container2">
+
+    <div class="mySlides fade">
+      <img src="{{url_for('static' , filename='s1.jfif')}}" style="width:100%">
+      <div class="text">THANKS FOR CHOOSING AERO!</div>
+    </div>
+
+    </div>
+    <br>
+
+    <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 2 seconds
+    }
+    </script>
+    <p class="rtd">Here you can track your flights,get your ticket info and also know what type of plane you are going to fly.</p>
+    <div class="bottom-container">
+      <a class="footer-link" href="https://www.instagram.com/krishnathangaraj/">Instagram</a>
+      <a class="footer-link" href="https://www.facebook.com/ricardo.krishna.3">Facebook</a>
+      <a class="footer-link" href="https://twitter.com/RicardoKeenu">Twitter</a>
+      <p class="pom">© 2021 Aero & company.</p>
+    </div>
+
+  </body>
+</html>
